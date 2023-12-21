@@ -1,0 +1,29 @@
+#Tells build frontend tools like pip and build which backend to use for your project
+#Notes:
+#requires = list of packages required to build your package - frontend should install them automatically when building your package
+#Frontend usually builds in isolated environments, so omitting dependencies here may cause build-time errors
+
+
+[build-system]
+requires = ["hatchling"] 
+build-backend = "hatchling.build" #Name of the Python object frontends will use to perform the build
+
+
+[project]
+name = "example_package_henrybarklam"
+version = "0.0.2"
+authors = [
+    { name="Henry Barklam", email="testemail@test.com"},
+]
+description = "A small example package"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+[project.urls]
+Homepage = "https://github.com/pypa/sampleproject"
+Issues = "https://github.com/pypa/sampleproject/issues"
